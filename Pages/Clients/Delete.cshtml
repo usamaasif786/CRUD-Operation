@@ -8,6 +8,7 @@
         String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=mystore;Integrated Security=True";
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
+            // For open the connection
             connection.Open();
             String sql = "DELETE FROM clients WHERE id=@id";
             using (SqlCommand command = new SqlCommand(sql, connection))
